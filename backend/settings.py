@@ -9,7 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-6yci1y*_c%n5dpcg8(jx=1z514(4ccsl)ts792b9pf+ib07tlt'
 DEBUG = True
 
-ALLOWED_HOSTS = ["activitytracker.connectwithvaibhav.com", '127.0.0.1']
+ALLOWED_HOSTS = ["*"]
 
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
