@@ -31,7 +31,8 @@ SECRET_KEY = 'django-insecure-6yci1y*_c%n5dpcg8(jx=1z514(4ccsl)ts792b9pf+ib07tlt
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["activitytracker.connectwithvaibhav.com"]
+ALLOWED_HOSTS = ["activitytracker.connectwithvaibhav.com", "http://localhost:5173",  'localhost',
+    '127.0.0.1',]
 
 
 REST_FRAMEWORK = {
@@ -165,7 +166,7 @@ django_heroku.settings(locals())
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173',
+    'http://127.0.0.1:5173',
 ]
 
 
