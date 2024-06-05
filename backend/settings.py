@@ -16,8 +16,6 @@ import os
 import django_heroku
 
 
-
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -31,22 +29,23 @@ SECRET_KEY = 'django-insecure-6yci1y*_c%n5dpcg8(jx=1z514(4ccsl)ts792b9pf+ib07tlt
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["activitytracker.connectwithvaibhav.com", 'http://127.0.0.1:5173/',]
+ALLOWED_HOSTS = ["activitytracker.connectwithvaibhav.com",
+                 'http://127.0.0.1:5173',]
 
 
 REST_FRAMEWORK = {
-    "DEFAULT_AUTHENTICATION_CLASSES":(
+    "DEFAULT_AUTHENTICATION_CLASSES": (
         "rest_framework_simplejwt.authentication.JWTAuthentication",
-        ),
-    "DEFAULT_PERMISSION_CLASSSES":[
+    ),
+    "DEFAULT_PERMISSION_CLASSSES": [
         "rest_framework.permissions.IsAuthenticated",
-        ],
+    ],
 }
 
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=30),
-    "REFRESH_TOKEN_LIFETIME": timedelta(minutes=60), 
-    }
+    "REFRESH_TOKEN_LIFETIME": timedelta(minutes=60),
+}
 
 # Application definition
 
@@ -64,6 +63,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -71,7 +72,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'backend.urls'
@@ -108,14 +108,13 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dehqdjfn6q7dbs',    
+        'NAME': 'dehqdjfn6q7dbs',
         'USER': 'u41945r3vqr5jd',
         'PASSWORD': 'p906825147b1fd69050a52a4173811168cdd8c872aed0366a9133dddbbbaf0e2f',
         'HOST': 'caij57unh724n3.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
-
 
 
 # Password validation
@@ -165,10 +164,9 @@ django_heroku.settings(locals())
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
-    'http://127.0.0.1:5173/',
+    'http://127.0.0.1:5173',
 ]
 
 
 CORS_ALLOW_ALL_ORIGIN = True
 CORS_ALLOW_CREDENTIALS = True
-
