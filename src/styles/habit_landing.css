@@ -1,0 +1,135 @@
+
+/* Default styles for all screen sizes */
+.grid-container {
+  display: block;
+  width: 60%;
+  margin: auto;
+
+
+}
+
+.grid-container h1 {
+  margin: 1.5rem;
+  background: thistle;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr repeat(7, auto); /* Adjusted for dynamic widths */
+  gap: 30px;
+  padding: 20px;
+  border: 10px solid; /* Border width */
+    border-image: linear-gradient(to right, transparent, #32012F, transparent) 1;  background-color: transparent; /* Transparent background */
+  background-color: #f9f9f9; /* Light background for the grid container */
+  border-radius: 4px; /* Rounded corners for the grid container */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow for the grid container */
+}
+
+/* Styles for grid titles */
+.grid-title {
+  background-color: #ffcae5; /* Green background */
+  color: #000000; /* White text */
+  border: 1px solid #dddddd;
+  border-radius: 5px; /* Rounded corners for grid titles */
+  font-size: 1.2em;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-weight: bold;
+}
+
+/* Styles for grid items */
+.grid-item {
+  background-color: #ffffff; /* White background for grid items */
+  border: 1px solid #dddddd;
+  border-radius: 5px; /* Rounded corners for grid items */
+  font-size: 1em;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Styles for grid item radios */
+.grid-item-radio {
+  background-color: #ffffff; /* White background for grid item radios */
+  border: 1px solid #dddddd;
+  border-radius: 5px; /* Rounded corners for grid item radios */
+  padding: 10px;
+  font-size: 1em;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+/* Optional: Add some hover effects for better user experience */
+.grid-title:hover, .grid-item:hover, .grid-item-radio:hover {
+  background-color: #eaeaea;
+  cursor: pointer;
+}
+
+/* Styles for checkboxes */
+.grid-item input[type="checkbox"] {
+  width: 18px; /* Adjust checkbox size */
+  height: 18px; /* Adjust checkbox size */
+  background-color: #fff; /* White background for checkbox */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 50%; /* Round checkbox */
+  cursor: pointer; /* Indicate clickable element */
+}
+
+.grid-item input[type="checkbox"]:checked {
+  background-color: #ffcae5; /* Green background for checked checkbox */
+}
+
+/* Styles for your custom checkbox class */
+.habit-checkbox {
+  /* Inherit styles from the default checkbox type */
+  /* You can override any styles here if needed */
+}
+
+.pagination-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.prev-button,
+.next-button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.prev-button:hover,
+.next-button:hover {
+  background-color: #45a049;
+}
+
+.arrow {
+  margin-right: 5px;
+}

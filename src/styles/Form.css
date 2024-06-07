@@ -1,0 +1,64 @@
+.root, html{
+  background-color: #f4f4f9 ;
+}
+.form-container {
+  
+    display: block;
+    margin: auto;
+    margin-top: 10rem;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 8px 6px rgba(0, 0, 0, 0.1);
+    border: 5px solid; /* Border width */
+    text-align: center;
+    border-image: linear-gradient(to right, transparent, aquamarine, transparent) 1;  background-color: transparent; /* Transparent background */
+    border-radius: 4px;
+    max-width: 900px;
+  }
+  .title{
+    font-size: 5rem; /* Slightly smaller heading */
+    margin: 20px;
+    color: coral;
+    font-family: inherit; /* Inherit font family from parent element */
+    text-decoration: underline;
+  }
+
+  .form-input {
+    width: 100%;
+    padding: 13px;
+    margin: 10px 0;
+    border: 2px darksalmon solid; /* Border width */
+    border-radius: 6px;
+    box-sizing: border-box;
+    max-width: 600px;
+  }
+  .form-input::placeholder {
+    font-weight: lighter; /* Adjust the font weight as needed */
+    /* Additional styles can be added here */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #35374B;
+    font-size: medium;
+   
+}
+  .form-button {
+    width: 95%;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: #7E8EF1;
+    font-size: large;
+    font-family:  Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+        color: black;
+    border: 4px solid; /* Border width */
+    border-image: linear-gradient(to right, transparent, #8DECB4, transparent) 1;  background-color: transparent; /* Transparent background */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    max-width: 400px;
+    margin-bottom: 3rem;
+  }
+  
+  .form-button:hover {
+    background-color: aquamarine !important;F1;
+  }

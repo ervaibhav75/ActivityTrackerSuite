@@ -1,0 +1,142 @@
+.result-modal-child {
+  width: 90%;
+  height: 90%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  border: none; 
+  border-radius: 8px;
+  padding: 2rem;
+  background-color: #fdfdfd;
+
+}
+
+.result-modal-child[open] {
+  animation: slide-in-from-top 0.35s ease-out;
+}
+
+.result-modal-child::backdrop {
+  background: rgba(0, 0, 0, 0.9);
+}
+.result-modal-child h3 {
+  font-family: 'Handjet', monospace;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.result-modal-child h2 {
+  font-family: 'Handjet', monospace;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.result-modal-child progress {
+  width: 100%;
+  height: 1.5rem;
+  margin: 0;
+  accent-color: #46cebe;
+}
+
+.close-button {
+  height: 3rem;
+  width: 3rem;
+  margin-right: 10px;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 4px;
+  background: #12352f;
+  color: #edfcfa;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.result-modal-child button:hover {
+  background: #051715;
+}
+
+.heading-child {
+  margin-top: 1rem;
+  color: chocolate;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container-child {
+  display: flex;
+  margin: 1rem;
+  background-color: gainsboro;
+}
+
+.main-content-child {
+  flex: 1; /* Take up remaining space */
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-child {
+  background-color: #fff;
+  padding: 1rem;
+  width: 50%;
+  height: 50%; /* Adjust height to make the chart smaller */
+  overflow: auto; /* Add scrollbars if content overflows */
+}
+
+.solution-insights-child {
+  margin-top: 0.5rem;
+  border: none; 
+  border-radius: 8px;
+  padding: 2rem;
+  background-color: #fdfdfd;
+  width: 100%; /* Make sure it takes the full width */
+  flex-grow: 1; /* Allow it to grow and take up remaining space */
+}
+
+.solution-flex{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+
+
+}
+.title-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+}
+
+.result-modal-child p {
+  padding: 1rem;
+  font-family: 'Handjet', monospace;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  border: 2px solid #051715;
+
+}
+
+.action-button {
+  height: auto;
+  width: auto;
+  margin-right: 10px;
+  margin: 1rem;
+  border: 1px solid #051715;
+  border-radius: 4px;
+  background: #051715;
+  color: #ffffff;
+  font-size: 2rem;
+  cursor: pointer;  
+}
+
+.action-button:hover {
+  background: #ff5e01;
+}
