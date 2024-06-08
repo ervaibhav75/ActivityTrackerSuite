@@ -4,7 +4,6 @@ import { forwardRef, useRef } from 'react';
 const FactorModal = forwardRef(function FactorModal({ onClose, updateFactorLogger }, ref) {
 
     function handleAnotherFactor(factor_obj) {
-
         updateFactorLogger(factor_obj)
         factorTitle.current.value = ""
         factorSolution.current.value = ""
@@ -12,29 +11,24 @@ const FactorModal = forwardRef(function FactorModal({ onClose, updateFactorLogge
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
     }
 
-    const factorTitle = useRef()
-    const factorSolution = useRef()
-    return (<>
-        <dialog ref={ref} className="result-modal">
+    const factorTitle = useRef();
+    const factorSolution = useRef();
 
-
-            <div className="modal-content">
-                <h1>Add Custom factor</h1>
-
+    return (
+        <dialog ref={ref} className="factor-modal">
+            <div className="factor-modal-content">
+                <h1>Add Custom Factor</h1>
 
                 <input ref={factorTitle} type="text" placeholder="Enter Mistake Factor" />
                 <textarea ref={factorSolution} type="text" placeholder="Enter Possible Solutions" />
 
                 <button
                     type="button"
-                    className="close"
+                    className="factor-modal-close"
                     onClick={(e) => {
-
                         if (!factorTitle.current.value || !factorSolution.current.value) {
-                            console.log("im cool!");
                             alert("Please add a solution/Factor");
                             return;
                         }
@@ -45,39 +39,44 @@ const FactorModal = forwardRef(function FactorModal({ onClose, updateFactorLogge
                             is_custom: true,
                             factor_id: null
                         });
-                        e.preventDefault()
-                        // Call onClose() method here
+                        e.preventDefault();
                     }}
                 >
                     Add More
                 </button>
 
+                <button
+                    type="button"
+                    className="factor-modal-close"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        if (!factorTitle.current.value || !factorSolution.current.value) {
+                            alert("Please select a solution/Factor");
+                            return;
+                        }
 
-                <button type="button" className="close" onClick={(e) => {
-                    e.preventDefault()
-                    console.log(`fv : ${factorTitle.current.value}`);
-                    if (!factorTitle.current.value || !factorSolution.current.value) {
-                        console.log("im cool!");
-                        alert("Please select a solution/Factor");
-                        return;
-                    }
-                    
-                    handleAnotherFactor({
-                        title: factorTitle.current.value.trim().toLowerCase(),
-                        solution: factorSolution.current.value.trim().toLowerCase(),
-                        is_custom: true,
-                        factor_id: null
-                    });
-                    onClose(); // Call onClose() method here
+                        handleAnotherFactor({
+                            title: factorTitle.current.value.trim().toLowerCase(),
+                            solution: factorSolution.current.value.trim().toLowerCase(),
+                            is_custom: true,
+                            factor_id: null
+                        });
+                        onClose();
+                    }}
+                >
+                    Done
+                </button>
 
-                }}>Done</button>
-
-                <button type="button" className="close" onClick={() => onClose()}>&times;</button>
-
+                <button
+                    type="button"
+                    className="factor-modal-close"
+                    onClick={() => onClose()}
+                >
+                    &times;
+                </button>
             </div>
-
         </dialog>
-    </>)
-})
+    );
+});
 
-export default FactorModal
+export default FactorModal;
