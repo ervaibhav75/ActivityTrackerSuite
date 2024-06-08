@@ -130,15 +130,19 @@ body {
 
 /* No Data Found */
 .no-data-found {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: auto;
     text-align: center;
     height: 100%;
 }
 
 .no-data-found img {
+    margin-top: 2rem;
     max-width: 80%;
-    height: auto;
+    height: 50%;
     margin-bottom: 2rem;
 }
 

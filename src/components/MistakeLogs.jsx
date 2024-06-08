@@ -485,7 +485,6 @@ export default function MistakeLogs() {
                             {renderChart()}
                         </div>
                     </div> : <div className='no-data-found'>
-                        <h1>No Data Available!</h1> 
                         <h2>Press Create Logs To Record Your Activity</h2>
                         <img src="/noDataFound.png" />
                     </div>}
