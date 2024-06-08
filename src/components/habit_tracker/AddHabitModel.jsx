@@ -111,7 +111,7 @@ const AddHabitModel = React.forwardRef(({ newHabitName, show, onClose }, ref) =>
                     Cancel
                 </Button>
                 <Button onClick={handleSubmit} color="primary">
-                    Add Habit
+                    Add Habits
                 </Button>
             </DialogActions>
         </Dialog>
