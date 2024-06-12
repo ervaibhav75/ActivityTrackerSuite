@@ -238,6 +238,7 @@ class CreateCustomMistakeFactorView(APIView):
                     if serializer.is_valid():
                         custom_mistake_obj = serializer.save()
                     else:
+                        print("Could not serialize in first foor loop")
                         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
                 else:
                     try:
@@ -254,6 +255,7 @@ class CreateCustomMistakeFactorView(APIView):
                         factor_object = serializer.save()
                         factors.append(factor_object)
                     else:
+                        print("Could not serialize in second for loop")
                         logger.exception("A serializer error due to factor serializer ")
                         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
                 else:
@@ -269,6 +271,7 @@ class CreateCustomMistakeFactorView(APIView):
                 mistake_factor_object = serializer.save()
                 return Response({'message': 'MistakeFactor created successfully'}, status=status.HTTP_201_CREATED)
             else:
+                print("could not serialise in end")
                 logger.exception("Invalid Serializer response from MF serializer itelf")
                 return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
