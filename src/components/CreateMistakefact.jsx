@@ -350,6 +350,7 @@ export default function CreateMistakefact() {
 
                 {mistakeLogger.length === 0 && <textarea
                     onChange={handleDescriptionEdit}
+                    required
                     ref={mistakeDescRef}
                     placeholder="Enter Mistake Description"
                 ></textarea>}
