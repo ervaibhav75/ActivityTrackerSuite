@@ -58,7 +58,7 @@ function ResponsiveAppBar() {
     };
 
     const handleAboutmeRedirect = () => {
-        window.location.href = 'https://portfolio.connectwithvaibhav.com';  
+        window.location.href = 'https://www.linkedin.com/in/vaibhav-patil-1000811ba/';  
       };
 
 
